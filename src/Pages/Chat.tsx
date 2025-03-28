@@ -154,8 +154,8 @@ const Chat = () => {
                 <div
                   className={`p-3 rounded shadow-sm text-wrap ${
                     msg.senderId === userId
-                      ? "bg-primary text-white"
-                      : "bg-light text-dark"
+                      ?  "bg-light text-dark"
+                      : "bg-primary text-white"
                   }`}
                   style={{
                     maxWidth: "60%",
