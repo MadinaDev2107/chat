@@ -106,11 +106,8 @@ const Chat = () => {
   }
 
   return (
-    <div className="chat-container container-fluid mt-4 d-flex flex-column flex-md-row">
-      <div
-        className="users-list border p-3 flex-md-grow-0 flex-md-shrink-0 w-100 w-md-25"
-        style={{ maxWidth: "25%" }}
-      >
+    <div className="chat-container w-100 mx-auto mt-4 d-flex">
+      <div className="users-list border p-3" style={{ width: "25%" }}>
         <h5>Users</h5>
         {users.map((user) => {
           return (
@@ -128,11 +125,11 @@ const Chat = () => {
         })}
       </div>
 
-      <div className="chat-box border p-3 flex-grow-1 w-100">
+      <div className="users-list border p-3" style={{ width: "75%" }}>
         <h4> {SelectedUser?.name ? SelectedUser.name : "Chat"}</h4>
         <div
-          className="messages-box border p-3 d-flex flex-column overflow-auto"
-          style={{ height: "60vh", maxWidth: "75%" }}
+          className="chat-box border p-3 d-flex flex-column overflow-auto"
+          style={{ height: "80vh" }}
         >
           {messages.map((msg) => (
             <div
@@ -160,7 +157,10 @@ const Chat = () => {
                       ? "bg-primary text-white"
                       : "bg-light text-dark"
                   }`}
-                  style={{ maxWidth: "60%" }}
+                  style={{
+                    maxWidth: "60%",
+                    borderRadius: "15px",
+                  }}
                 >
                   <small className="d-block text-muted">{msg.senderName}</small>
                   {msg.text}
