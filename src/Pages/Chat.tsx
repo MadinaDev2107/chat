@@ -136,8 +136,8 @@ const Chat = () => {
               key={msg.id}
               className={`d-flex ${
                 msg.senderId === userId
-                  ? "justify-content-start"
-                  : "justify-content-end"
+                  ? "justify-content-end"
+                  : "justify-content-start"
               } mb-2`}
               onDoubleClick={() => setSelectedMessage(msg.id!)}
             >
@@ -154,7 +154,7 @@ const Chat = () => {
                 <div
                   className={`p-3 rounded shadow-sm text-wrap ${
                     msg.senderId === userId
-                      ?  "bg-light text-dark"
+                      ? "bg-light text-dark"
                       : "bg-primary text-white"
                   }`}
                   style={{
