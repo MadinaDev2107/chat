@@ -109,7 +109,7 @@ const Chat = () => {
     <div className="chat-container container-fluid mt-4 d-flex flex-column flex-md-row">
       <div
         className="users-list border p-3 flex-md-grow-0 flex-md-shrink-0 w-100 w-md-25"
-        style={{ maxWidth: "100%" }}
+        style={{ maxWidth: "25%" }}
       >
         <h5>Users</h5>
         {users.map((user) => {
@@ -132,7 +132,7 @@ const Chat = () => {
         <h4> {SelectedUser?.name ? SelectedUser.name : "Chat"}</h4>
         <div
           className="messages-box border p-3 d-flex flex-column overflow-auto"
-          style={{ height: "60vh" }}
+          style={{ height: "60vh", maxWidth: "75%" }}
         >
           {messages.map((msg) => (
             <div
